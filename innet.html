@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            width: 620px;
+            height: 300px;  
+            resize: none;
+        }
+        .main {
+            display: flex;  
+        }
+        .right {
+            border-left: 3px solid red;
+            height: 95vh;
+            padding-left: 10px;
+            width: 50%;
+        }
+        .left {
+            width: 50%;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+        button {
+            padding: 10px 15px;
+            background-image: linear-gradient(to right, dodgerblue,silver);
+            border: none;
+        }
+        p {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+    <div class="left">
+            <p id="h1">   </p>
+    </div> 
+   <div class="right">
+    <textarea id="inp" onkeyup="yozil(this.value)" type="text" placeholder="Yozorinchi qani nma bolarkan"></textarea>
+    <br>
+   <div class="buttons">
+    <button type="button" onclick="backgroundchanger()">Background</button>
+    <button type="button" onclick="fontsizechanger()"> Font Size </button>
+    <button type="button" onclick="colorchanger()">Color</button>
+    </div>
+
+    </div> 
+    </div>
+<script>
+
+     let inp = document.getElementById("inp")
+
+     let changer = document.getElementById('h1')
+
+     function backgroundchanger(){
+        changer.style.backgroundColor = 'green'
+     }
+     function colorchanger() {
+        changer.style.color = 'white';
+     }
+     function fontsizechanger(){
+        changer.style.fontSize = '300%';
+     }
+     function yozil(arg){
+            h1.innerHTML = arg
+        }
+
+</script>
+   
+
+
+</body>
+</html>
